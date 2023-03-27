@@ -9,5 +9,6 @@ services:
       dockerfile: dockerfile
       args:
         VERSION_LIBRAW:
+    tty: true
     volumes:
       - ${DATA_DIR:-.}:/workspace
