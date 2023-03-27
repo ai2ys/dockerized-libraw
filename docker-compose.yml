@@ -1,0 +1,13 @@
+version: '3.9'
+services:
+  libraw:
+    hostname: libraw
+    container_name: libraw
+    image: ai2ys/dockerized-libraw:${VERSION_LIBRAW}
+    build:
+      context: .
+      dockerfile: dockerfile
+      args:
+        VERSION_LIBRAW:
+    volumes:
+      - ${DATA_DIR:-.}:/workspace
